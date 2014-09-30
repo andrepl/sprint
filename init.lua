@@ -74,3 +74,7 @@ minetest.register_globalstep(function(dtime)
 	end
 end)
 
+-- Public API
+function player_is_sprinting(player_name)
+	return players[player_name]["moving"] and players[player_name]["state"] == 3
+end
